@@ -1,0 +1,6 @@
+// Método del botón Borrar
+ void borrar() {
+  txtSueldo.setText("");
+  txtSueldo.requestFocus();
+  txtS.setText("");
+ }
