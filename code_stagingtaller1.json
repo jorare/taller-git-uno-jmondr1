@@ -1,0 +1,47 @@
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+ 
+public class Problema01b extends JApplet implements ActionListener {
+ 
+ // Declaración de variables globales para la GUI
+ JButton btnIngresar, btnBorrar;
+ JTextArea txtS;
+ JLabel lblSueldo;
+ JTextField txtSueldo;
+ JScrollPane scpScroll;
+ 
+ // Declaración de variables globales para el algoritmo
+ int contaSuel = 0;
+ double suelMay = 0, suelMen = Double.MAX_VALUE, suelTot = 0, suelProm;
+ 
+ // -----------------------------------------------------------------------
+ // Crea la interfaz gráfica de usuario
+ public void init() {
+  getContentPane().setLayout(null);
+ 
+  txtSueldo = new JTextField();
+  txtSueldo.setBounds(70, 15, 100, 23);
+  getContentPane().add(txtSueldo);
+ 
+  btnIngresar = new JButton("Ingresar");
+  btnIngresar.setBounds(321, 15, 100, 23);
+  btnIngresar.addActionListener(this);
+  getContentPane().add(btnIngresar);
+ 
+  btnBorrar = new JButton("Borrar");
+  btnBorrar.setBounds(220, 15, 100, 23);
+  btnBorrar.addActionListener(this);
+  getContentPane().add(btnBorrar);
+ 
+  lblSueldo = new JLabel("Sueldo");
+  lblSueldo.setBounds(15, 15, 90, 23);
+  getContentPane().add(lblSueldo);
+ 
+  txtS = new JTextArea();
+  txtS.setFont(new Font("monospaced", 0, 12));
+ 
+  scpScroll = new JScrollPane(txtS);
+  scpScroll.setBounds(15, 53, 406, 110);
+  getContentPane().add(scpScroll);
+  
